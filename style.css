@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #262626:
+}
+
+.mapBox{
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: #fff;                                           
+}
+
+.mapBox iframe{
+    width: 100;
+    height: 100;       
+}      
+ .grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.contador-estilizado {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #00695c;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 105, 92, 0.3);
+}

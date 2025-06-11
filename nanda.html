@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ONG Jovem Aprendiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #00695c;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00695c;
+    }
+
+    .mari {
+      height: 85vh;
+      background: linear-gradient(to right, #00695caa, #00695cbb), url('https://conteudo.senacrs.com.br/wp-content/uploads/2023/08/aprendizvetor3.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 80px;
+      color: white;
+    }
+
+    .mari h2 {
+      font-size: 48px;
+      max-width: 600px;
+      font-weight: 800;
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #00695c;
+    }
+
+    .cta {
+      background: #00695c;
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta button {
+      background: #a9ec5b;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta button:hover {
+      background:#d8fa60;
+
+    
+      
+    }
+
+    .nanda {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .nanda iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .mari {
+        padding: 40px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .mari h2 {
+        font-size: 32px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ONG Jovem Aprendiz</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Quem Somos</a></li>
+        <li><a href="#programas">Programas</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#mapa">Localização</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="mari">
+    <h2>Transformamos o futuro de jovens através da educação e do trabalho</h2>
+  </div>
+  <section id="sobre">
+    <h2>Sobre a ONG</h2>
+    <div class="grid-3">
+      <div class="card">
+        <i class="fa-solid fa-eye"></i>
+        <h3>Missão</h3>
+        <p>Capacitar jovens em situação de vulnerabilidade social, oferecendo oportunidades de aprendizado e inserção no mercado de trabalho.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-bullseye"></i>
+        <h3>Visão</h3>
+        <p>Ser referência no Brasil como agente de transformação social por meio da formação profissional e cidadã.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Impacto</h3>
+        <p>Mais de 5 mil jovens formados, com taxa de 78% de inserção no mercado formal de trabalho em 2024.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="programas">
+    <h2>Programas em Destaque</h2>
+    <div class="grid-3">
+      <div class="card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Jovem Aprendiz</h3>
+        <p>Parcerias com empresas para incluir jovens no mercado de trabalho com formação teórica e prática.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Capacitação Tech</h3>
+        <p>Cursos gratuitos de informática, design e programação para aumentar a empregabilidade juvenil.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-comments"></i>
+        <h3>Mentoria Profissional</h3>
+        <p>Conectamos jovens a mentores voluntários que os orientam na construção de carreira e autoconfiança.</p>
+      </div>
+    </div>
+  </section>
+  <section id="novos-cards">
+  <h2>Mais Informações</h2>
+  <div class="grid-3">
+    <div class="card">
+      <i class="fa-solid fa-hands-helping"></i>
+      <h3>Seja Voluntário</h3>
+      <p>Participe das nossas ações e ajude a transformar o futuro de jovens em todo o Brasil.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-comments-dollar"></i>
+      <h3>Transparência</h3>
+      <p>Relatórios anuais e dados sobre o uso de recursos estão disponíveis para todos.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-heart"></i>
+      <h3>Depoimentos</h3>
+      <p>Confira histórias reais de jovens que mudaram de vida com a nossa ajuda.</p>
+    </div>
+  </div>
+</section>
+  <section id="eventos">
+    <h2>Próximos Eventos</h2>
+   <div class="card">
+  <i class="fa-solid fa-calendar-days"></i>
+  <h3>Feira de Oportunidades</h3>
+  <p>Evento para networking, vagas de emprego e palestras exclusivas para jovens.</p>
+  <p><strong>Início em:</strong></p>
+  <div id="contador" class="contador-estilizado"></div>
+
+</div>
+
+        
+    </div>
+  </section>
+
+ <div class="cta" id="contato">
+  <h2>Quer ajudar ou participar?</h2>
+  <p>Entre em contato conosco para saber como ser voluntário, parceiro ou inscrever um jovem.</p>
+
+  <p><strong>Instagram:</strong> <a href="https://www.instagram.com/nanda_alaac" target="_blank" style="color: #ffd600;">@nanda_alaac</a></p>
+  <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_marrymmn" target="_blank" style="color: #ffd600;">@_marrymmn</a></p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/556984890246" target="_blank" style="color:#ffd600;">(55) 69 8489-0246</a></p>
+
+  <button onclick=location.href='https://www.instagram.com/nanda_alaac' target="_blank">Entrar em Contato</button>
+</div>
+
+
+  <div class="nanda" id="mapa">
+    <h2>Localização</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6149.641854964188!2d-46.60970034750401!3d-23.58284405960228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1747870599359!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <footer>
+  &copy; 2025 ONG Jovem Aprendiz — Todos os direitos reservados<br>
+</footer>
+
+<script>
+  // Data do evento (exemplo: 15 de julho de 2025 às 10:00)
+  const dataEvento = new Date("2025-07-15T10:00:00").getTime();
+
+  const contador = document.getElementById("contador");
+
+  const atualizarContador = setInterval(() => {
+    const agora = new Date().getTime();
+    const tempoRestante = dataEvento - agora;
+
+    if (tempoRestante < 0) {
+      clearInterval(atualizarContador);
+      contador.innerHTML = "Evento em andamento!";
+      return;
+    }
+
+    const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((tempoRestante % (1000 * 60)) / 1000);
+
+    contador.innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+  }, 1000);
+</script>
+
+</body>
+</html>
