@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -179,6 +179,28 @@
     }
 
     
+
+       
+    
+        .timer{
+            display: flex;
+            justify-content: center;
+            color: rgb(10, 61, 35);
+            gap: 50px;
+            margin-top: 40px;
+            font-size: 10pt;
+            
+        }
+        #isa{
+            margin-top: 10px;
+        }
+
+        .nanda h2{
+          color:#111827
+        }
+        
+
+    
   </style>
 </head>
 <body>
@@ -262,21 +284,124 @@
 </section>
   <section id="eventos">
     <h2>Próximos Eventos</h2>
-    <div class="mari2">
+   <div class="card">
+  <i class="fa-solid fa-calendar-day"></i>
+  <h3>Curso de TI - Programação e Desenvolvimento</h3>
+        <p><strong>Horário:</strong> Segunda a Sexta</p>
+        <p><strong>Dia de Início:</strong> 1º de Julho   <strong>Hora:</strong> 18h às 21h</p>
+        <p><strong>Local:</strong> Centro de Capacitação Profissional</p>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123, Bairro Centro</p>
+    
+        <div id="isa"><p><strong>Início em:</strong></p></div>
+        
+   
+    <div class="timer">
+        <div>
+            <h1 id="dia">00</h1>
+            <p>Dias</p>
+        </div>
+        <div>
+            <h1 id="horas">00</h1>
+            <p>Horas</p>
+        </div>
+        <div>
+            <h1 id="minutos">00</h1>
+            <p>Minutos</p>
+        </div>
+        <div>
+            <h1 id="segundos">00</h1>
+            <p>Segundos</p>
+        </div>
+    </div>
+  <div id="contador" class="contador-estilizado"></div>
+  
+</div>
+
         
     </div>
   </section>
 
- <div class="cta" id="contato">
-  <h2>Quer ajudar ou participar?</h2>
-  <p>Entre em contato conosco para saber como ser voluntário, parceiro ou inscrever um jovem.</p>
+  <div class="cta" id="contato" style="background-color: #f8f8f8; padding: 60px 20px; text-align: center; font-family: Arial, sans-serif;">
+  <h2 style="font-size: 32px; color: #333; margin-bottom: 10px;">Quer ajudar ou participar?</h2>
+  <h2 style="font-size: 28px; color: #4CAF50; margin-top: 0;">Entre em Contato</h2>
+  
+  <p style="color: #666; font-size: 16px; margin-bottom: 40px;">Preencha o formulário abaixo e retornaremos em breve.</p>
+<form id="whatsappForm" onsubmit="enviarParaWhatsApp(event)" style="max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
+  <div style="display: flex; flex-direction: column; gap: 15px;">
+    <input type="text" name="nome" placeholder="Nome" required 
+           style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;">
+    
+    <input type="email" name="email" placeholder="Email" required 
+           style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;">
+    
+    <input type="tel" name="telefone" placeholder="Telefone" 
+           style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;">
+    
+    <input type="text" name="assunto" placeholder="Assunto" 
+           style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;">
+    
+    <textarea name="mensagem" placeholder="Informe o motivo de seu contato..." rows="5"
+              style="padding: 12px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px;"></textarea>
 
-  <p><strong>Instagram:</strong> <a href="https://www.instagram.com/nanda_alaac" target="_blank" style="color: #ffd600;">@nanda_alaac</a></p>
-  <p><strong>Instagram:</strong> <a href="https://www.instagram.com/_marrymmn" target="_blank" style="color: #ffd600;">@_marrymmn</a></p>
-  <p><strong>WhatsApp:</strong> <a href="https://wa.me/556984890246" target="_blank" style="color:#ffd600;">(55) 69 8489-0246</a></p>
+    <button type="submit" 
+            style="background-color: #4CAF50; color: white; padding: 14px; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s;">
+      Enviar
+    </button>
+  </div>
+</form>
 
-  <button onclick=location.href='https://www.instagram.com/nanda_alaac' target="_blank">Entrar em Contato</button>
-</div>
+<script>
+  function enviarParaWhatsApp(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('whatsappForm');
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
+    const telefone = form.telefone.value.trim();
+    const assunto = form.assunto.value.trim();
+    const mensagem = form.mensagem.value.trim();
+
+    if (!nome || !email || !mensagem) {
+      alert('Por favor, preencha ao menos Nome, Email e Mensagem.');
+      return;
+    }
+
+    const texto = `Olá! Gostaria de entrar em contato:
+*Nome:* ${nome}
+*Email:* ${email}
+*Telefone:* ${telefone}
+*Assunto:* ${assunto}
+*Mensagem:* ${mensagem}`;
+
+    const numeroDestino = '556984890246'; // Substitua pelo seu número
+    const link = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(texto)}`;
+
+    const confirmar = confirm("Deseja realmente enviar essa mensagem via WhatsApp?");
+    if (confirmar) {
+      window.open(link, '_blank');
+    }
+  }
+</script>
+
+
+  <p style="margin-top: 40px; color: #444; font-size: 16px;">Entre em contato conosco para saber como ser voluntário, parceiro ou inscrever um jovem.</p>
+
+  <div style="margin-top: 20px; font-size: 16px; color: #555;">
+    <p><strong>Instagram:</strong> 
+      <a href="https://www.instagram.com/_marrymmn" target="_blank" style="color: #4CAF50; text-decoration: none;">@_marrymmn</a>
+    </p>
+    <p><strong>WhatsApp:</strong> 
+      <a href="https://wa.me/556992375853" target="_blank" style="color: #4CAF50; text-decoration: none;">(55) 69 9237-5853</a>
+    </p>
+  </div>
+
+  <button onclick="location.href='https://www.instagram.com/nanda_alaac'" 
+          target="_blank" 
+          style="margin-top: 30px; background-color: #4CAF50; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer;">
+    Entrar em Contato
+  </button>
+
+ 
 
 
   <div class="nanda" id="mapa">
@@ -289,5 +414,39 @@
 </footer>
 
 
+
 </body>
+<script>
+        const dia = document.getElementById('dia')
+        const horas = document.getElementById('horas')
+        const minutos = document.getElementById('minutos')
+        const segundos = document.getElementById('segundos')
+
+        const dataFinal = "1 jul 2025"
+
+        function countDown() {
+            const dataDeTermino = new Date(dataFinal)
+            const hoje = new Date()
+            const segTotal = (dataDeTermino - hoje) / 1000
+
+            const finalDias = Math.floor(segTotal / 60 / 60 / 24)
+            const finalHoras = Math.floor(segTotal / 60 / 60) % 24
+            const finalMinutos = Math.floor(segTotal / 60) % 60
+            const finalSegundos = Math.floor(segTotal) % 60
+
+            dia.innerHTML = finalDias
+            horas.innerHTML = formatoTempo(finalHoras)
+            minutos.innerHTML = formatoTempo(finalMinutos)
+            segundos.innerHTML = formatoTempo(finalSegundos)
+        }
+
+        function formatoTempo(tempo) {
+            return tempo < 10 ? '0' + tempo : tempo;
+        }
+
+        countDown()
+        setInterval(countDown, 1000)
+    </script>
+</body>
+</html>
 </html>
